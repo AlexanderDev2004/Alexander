@@ -2,7 +2,7 @@
 title: Alexander Porto
 date : 2024-12-31
 description: Alexander Porto
-demo : *
+demo : -
 source : https://github.com/AlexanderDev2004/Alexander
 type : Personal
 stack:
