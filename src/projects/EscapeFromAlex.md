@@ -2,7 +2,7 @@
 title: Escape From Alex
 date : 2023-8-10
 description: Escape From Alex
-source : *
+source : 
 demo : https://alex-game-dev-indonesia.itch.io/escape-from-alex
 type : Game
 stack:
