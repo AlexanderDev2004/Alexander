@@ -1,0 +1,57 @@
+---
+title: convers-money
+date : 2023-2-14
+description: Web-timerSimple
+source : webconvers-money-github-io
+demo : https://convers-money.vercel.app/
+type : website, personal
+stack:
+    - ["html", "https://developer.mozilla.org/en-US/docs/Web/HTML"]
+    - ["css", "https://developer.mozilla.org/en-US/docs/Web/CSS"]
+    - ["javascript", "https://developer.mozilla.org/en-US/docs/Web/JavaScript"]
+---
+
+**convers-money** is a website created with HTML, CSS, and JavaScript. It is a simple website that can be used to track money. This project is the result of my own learning as a Web Developer
+```javascript
+const convert = document.querySelector('.convert');
+const input = document.querySelector('.input');
+const output = document.querySelector('.output');
+
+convert.addEventListener('click', function() {
+  const value = input.value;
+  const from = input.dataset.from;
+  const to = input.dataset.to;
+
+  if (value && from && to) {
+    const conversion = convertCurrency(value, from, to);
+    output.innerHTML = `${value} ${from} = ${conversion} ${to}`;
+  }
+});
+
+function convertCurrency(value, from, to) {
+  const rates = {
+    'USD': 'USD',
+    'EUR': 'EUR',
+    'GBP': 'GBP',
+    'JPY': 'JPY',
+    'CAD': 'CAD',
+    'AUD': 'AUD',
+    'CHF': 'CHF',
+    'CNY': 'CNY',
+    'HKD': 'HKD',
+    'INR': 'INR',
+    'RUB': 'RUB',
+    'SGD': 'SGD',
+    'TRY': 'TRY',
+    'ZAR': 'ZAR',
+  };
+
+  const rate = rates[from];
+  const conversionRate = rates[to];
+
+  if (rate && conversionRate) {
+    const convertedValue = value * rate / conversionRate;
+    return convertedValue.toFixed(2);
+  }
+}
+```
