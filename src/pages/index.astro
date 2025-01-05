@@ -1,6 +1,8 @@
 ---
 import '../styles/globals.css'
 import { ModeToggle } from '@/components/ModeToggle';
+import { FaGithub } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 ---
 
 <script is:inline>
@@ -26,5 +28,7 @@ import { ModeToggle } from '@/components/ModeToggle';
 	<body>
       <ModeToggle client:load  />
 		<h1 class="text-3xl font-bold underline py-7">Welcome to my website</h1>
+		<FaGithub className='text-3xl' href='https://github.com/AlexanderDev2004' />
+		<FaXTwitter className='text-3xl' />
 	</body>
 </html>
