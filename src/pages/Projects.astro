@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Main from "@/layouts/main.astro";
 
-const projects = await getCollection("projects").then((projects) => projects.sort((a, b) => a.data.date > b.data.date ? -1 : 1));
+const projects = await getCollection("projects").then((projects) => projects.sort((a, b) => a.data.date ));
 ---
 
 <Main title="Projects" description="">
@@ -22,7 +22,7 @@ const projects = await getCollection("projects").then((projects) => projects.sor
               <i class="fa-solid fa-calendar" />
               {projects.data.date}
             </h5>
-            
+
           </div>
           <h4 class="my-2">{projects.data.description}</h4>
           <a
